@@ -1,25 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Lilita_One, Fredoka } from "next/font/google";
+import {
+  Space_Grotesk,
+  Inter,
+  Luckiest_Guy,
+} from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const lilitaOne = Lilita_One({
+const luckiestGuy = Luckiest_Guy({
   weight: "400",
-  variable: "--font-lilita-one",
-  subsets: ["latin"],
-});
-
-const fredoka = Fredoka({
-  variable: "--font-fredoka",
+  variable: "--font-luckiest-guy",
   subsets: ["latin"],
 });
 
@@ -36,7 +35,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${lilitaOne.variable} ${fredoka.variable} h-full antialiased`}
+      className={`${spaceGrotesk.variable} ${inter.variable} ${luckiestGuy.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
